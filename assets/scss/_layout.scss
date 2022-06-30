@@ -1,0 +1,430 @@
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0px 10px;
+
+  @media screen and (max-width: $break-medium) {
+    width: 95vw;
+  }
+}
+
+header {
+  height: 4.375rem;
+  background-color: $white;
+}
+
+.header__display {
+  @include flex;
+  height: 100%;
+}
+
+.menu ul {
+  @include flex;
+  gap: 4.125rem;
+
+  @media screen and (max-width: $break-medium) {
+    flex-direction: column;
+  }
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: $gray;
+  transition: all 0.3s;
+
+  &:hover {
+    color: $blue-dark;
+  }
+
+  @media screen and (max-width: $break-medium) {
+    font-size: 1.125rem;
+  }
+}
+
+.menu {
+  @media screen and (max-width: $break-medium) {
+    position: absolute;
+    z-index: 1;
+    background-color: $white;
+    width: 50%;
+    height: calc(100vh - 70px);
+    top: 70px;
+    right: 0;
+    padding: 2rem 0;
+    display: none;
+  }
+
+  @media screen and (max-width: $break-small) {
+    width: 70%;
+  }
+}
+
+.menu.active {
+  display: block;
+}
+
+.menu__mobile {
+  img {
+    width: 2rem;
+  }
+
+  display: none;
+  cursor: pointer;
+
+  @media screen and (max-width: $break-medium) {
+    display: block;
+  }
+}
+
+.intro {
+  background-color: $blue-light;
+}
+
+.intro__flex {
+  @include flex;
+  flex-wrap: nowrap;
+
+  @media screen and (max-width: $break-medium) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.intro__item h1 {
+  font-size: 3rem;
+  color: $blue-dark;
+  margin-bottom: 3.125rem;
+
+  @media screen and (min-width: $break-small) and (max-width: $break-medium) {
+    font-size: 2.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media screen and (max-width: $break-small) {
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.intro__item img {
+  max-width: 100%;
+}
+
+.intro__item a {
+  @include btn;
+  text-decoration: none;
+  padding: 1rem 2rem;
+
+  @media screen and (max-width: $break-small) {
+    font-size: 0.875rem;
+    margin-top: 2.5rem;
+    padding: 0.6rem 1.5rem;
+  }
+}
+
+.functionalities {
+  @include flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 4rem;
+}
+
+.functionalities h2 {
+  margin-top: 4rem;
+  font-size: 2.5rem;
+  color: $blue-dark;
+
+  @media screen and (min-width: $break-small) and (max-width: $break-medium) {
+    font-size: 2rem;
+  }
+
+  @media screen and (max-width: $break-small) {
+    font-size: 1.5rem;
+  }
+}
+
+.functionalities__flex {
+  @include flex;
+  gap: 6rem;
+
+  @media screen and (max-width: $break-medium) {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.functionalities__item {
+  @include flex;
+  flex-direction: column;
+  max-width: 220px;
+  height: 160px;
+  margin-bottom: 8rem;
+}
+
+.functionalities__item h6 {
+  font-size: 1.125rem;
+  color: $blue-dark;
+}
+
+.functionalities__item p {
+  font-size: 1rem;
+  color: $gray;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+}
+
+.app {
+  background-color: $blue-light;
+}
+
+.app__flex {
+  @include flex;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  @media screen and (min-width: $break-small) and (max-width: $break-medium) {
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: $break-small) {
+    font-size: 1.5rem;
+  }
+}
+
+.app__1 {
+  flex: 2;
+}
+
+.app__1 h2 {
+  font-size: 2rem;
+  color: $blue-dark;
+  margin-bottom: 1.5rem;
+
+  @media screen and (max-width: $break-medium) {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
+.app__1 p {
+  font-family: "Inter", sans-serif;
+  color: $gray;
+  max-width: 450px;
+  margin-bottom: 2rem;
+
+  @media screen and (max-width: $break-medium) {
+    text-align: center;
+    font-size: 0.875rem;
+    max-width: 100%;
+  }
+}
+
+.app__1 img {
+  cursor: pointer;
+
+  @media screen and (max-width: $break-medium) {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.app__2 {
+  flex: 1;
+
+  @media screen and (max-width: $break-medium) {
+    display: none;
+  }
+}
+
+.plans h2 {
+  font-size: 2.5rem;
+  color: $blue-dark;
+  text-align: center;
+  margin-top: 3.5rem;
+  margin-bottom: 1.5rem;
+
+  @media screen and (max-width: $break-medium) {
+    font-size: 1.5rem;
+  }
+}
+
+.plans p {
+  text-align: center;
+  font-size: 1.125rem;
+  color: $gray;
+
+  @media screen and (max-width: $break-medium) {
+    font-size: 0.875rem;
+  }
+}
+
+.plans__cards {
+  @include flex;
+  flex-wrap: nowrap;
+  margin-top: 6rem;
+  gap: 2rem;
+
+  @media screen and (max-width: $break-medium) {
+    flex-direction: column;
+  }
+}
+
+.card__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 370px;
+  height: 470px;
+  border-radius: 8px;
+  background-color: $blue-light;
+  padding: 5px;
+}
+
+.card__item h3 {
+  color: $blue-dark;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 3.5rem;
+}
+
+p.price {
+  margin: 3rem 0;
+  font-size: 3.125rem;
+  color: $blue-dark;
+  font-weight: bold;
+  position: relative;
+}
+
+.price span {
+  font-size: 1.625rem;
+}
+
+.price::before {
+  content: "R$";
+  font-size: 1.25rem;
+  position: absolute;
+  left: -30px;
+  top: 10px;
+}
+
+.card__item a {
+  @include btn;
+  text-decoration: none;
+  padding: 0.5rem 5rem;
+  margin: 3rem 0;
+}
+
+.better {
+  background-color: $blue-dark;
+  margin-top: -50px;
+
+  h3 {
+    color: $white;
+  }
+
+  p.price {
+    color: $white;
+  }
+
+  p {
+    color: $gray-light;
+  }
+
+  @media screen and (max-width: $break-medium) {
+    margin-top: 0;
+  }
+}
+
+.better__span {
+  font-size: 0.875rem;
+  background-color: $blue;
+  color: $white;
+  border-radius: 30px;
+  padding: 0.5rem 1.5rem;
+  margin-top: 1rem;
+}
+
+.contact {
+  height: 380px;
+  margin-top: 4rem;
+  background-image: url("../image/contato.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 3rem;
+}
+
+.contact__flex {
+  @include flex;
+  flex-direction: column;
+}
+
+.contact h2 {
+  color: $white;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+
+  @media screen and (max-width: $break-small) {
+    font-size: 1.5rem;
+  }
+}
+
+.contact p {
+  text-align: center;
+  color: $gray-light;
+  margin-bottom: 6rem;
+
+  @media screen and (max-width: $break-small) {
+    margin-bottom: 3rem;
+    font-size: 1rem;
+  }
+}
+
+.contact input {
+  width: 300px;
+  border: 0;
+  background-color: transparent;
+  border-bottom: 1px solid $white;
+  outline: none;
+  padding-bottom: 5px;
+  color: $white;
+  font-size: 1rem;
+
+  &::placeholder {
+    color: $white;
+    font-size: 1rem;
+    font-family: "Inter", sans-serif;
+  }
+}
+
+.contact button {
+  @include btn;
+  border: none;
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  margin-left: 2rem;
+  cursor: pointer;
+
+  @media screen and (max-width: $break-small) {
+    display: block;
+    margin-top: 1rem;
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+footer {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $blue-dark;
+  text-align: center;
+  padding: 10px;
+}

@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Sora:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Sora", sans-serif;
+  font-size: 16px;
+}
+
+$blue: #0f9afe;
+$blue-light: #eff8ff;
+$blue-dark: #293145;
+$white: #ffffff;
+$gray: #6e7275;
+$gray-light: #dbdbdb;
+
+$break-small: 480px;
+$break-medium: 768px;
+
+@mixin flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@mixin btn {
+  background-color: $blue;
+  color: $white;
+  font-family: "Inter", sans-serif;
+  font-size: 1.125rem;
+  border-radius: 50px;
+}
